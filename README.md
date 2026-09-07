@@ -79,7 +79,7 @@ docker compose restart app
 
 ## English quick start
 
-Install Docker Engine, Compose v2 and OpenSSL on Linux. Run `bash install.sh` from the project directory, read `/data/initial-password.txt` with the command above and open http://localhost:3210. This standalone edition uses a local account, SQLite and a file evidence store; it does not require Sites or ChatGPT.
+Install Docker Engine, Compose v2 and OpenSSL on Linux. Run `bash install.sh` from the project directory, read `/data/initial-password.txt` with the command above and open http://localhost:3210. This standalone edition uses a local account, SQLite and a file evidence store; it does not require Sites .
 
 Create a scoped case, deposit a bounded evidence file, select an installed execution profile and run it. The isolated worker returns actual output, which is deposited automatically with a hash and custody record. Nmap inventory output additionally passes through the findings connector. Review findings and save bilingual reports from the same interface.
 
