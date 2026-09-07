@@ -1,3 +1,5 @@
+![شعار مختبر طلال السيبراني](https://raw.githubusercontent.com/En-Talal-ALSohimiy/talal-cyber-lab/main/public/brand/talal-cyber-mark.png)
+
 # مختبر طلال السيبراني | Talal Cyber Lab
 
 **Linux edition — source prepared; full Linux acceptance pending.**
