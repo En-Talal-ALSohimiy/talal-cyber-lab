@@ -1,0 +1,35 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Synthetic analyzer",
+          "rules": []
+        }
+      },
+      "results": [
+        {
+          "ruleId": "TRAINING001",
+          "level": "warning",
+          "message": {
+            "text": "Training finding"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample.js"
+                },
+                "region": {
+                  "startLine": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

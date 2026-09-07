@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import {randomBytes,scryptSync} from 'node:crypto';import {DatabaseSync} from 'node:sqlite';
+// Read a replacement password from stdin, never a process argument or log.
+let password='';for await(const chunk of process.stdin){password+=chunk;if(password.length>256)throw new Error('Password too long')}password=password.replace(/\r?\n$/,'');if(password.length<16)throw new Error('Use at least 16 characters');
+const dir=process.env.LAB_DATA||'data',file=path.join(dir,'auth.json'),auth=JSON.parse(fs.readFileSync(file,'utf8'));auth.salt=randomBytes(32).toString('hex');auth.hash=scryptSync(password,auth.salt,64).toString('hex');const tmp=file+'.tmp';fs.writeFileSync(tmp,JSON.stringify(auth),{mode:0o600});fs.renameSync(tmp,file);const db=new DatabaseSync(path.join(dir,'lab.sqlite'));db.exec('DELETE FROM local_sessions');db.close();fs.rmSync(path.join(dir,'initial-password.txt'),{force:true});console.log('Password changed and sessions revoked. Restart the app to load the new credential.');
+

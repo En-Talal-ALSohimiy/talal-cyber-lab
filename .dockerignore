@@ -1,0 +1,13 @@
+node_modules
+data
+.env*
+.git
+.openai
+.wrangler
+.vinext
+dist
+dist-local
+*.zip
+*.tar
+*.tsbuildinfo
+

@@ -1,0 +1,21 @@
+{
+  "site": [
+    {
+      "@name": "https://example.test",
+      "alerts": [
+        {
+          "name": "Synthetic header observation",
+          "riskcode": "1",
+          "desc": "Training sample only",
+          "solution": "Review configuration",
+          "instances": [
+            {
+              "uri": "https://example.test/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
